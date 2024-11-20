@@ -25,12 +25,12 @@ pins.digital_write_pin(DigitalPin.P12, 0)
 basic.clear_screen()
 
 def on_forever():
-    if input.pin_is_pressed(TouchPin.P0):
+    if not (input.pin_is_pressed(TouchPin.P0)):
         music.play(music.tone_playable(587, music.beat(BeatFraction.WHOLE)),
             music.PlaybackMode.UNTIL_DONE)
         basic.show_number(0)
         basic.clear_screen()
-    if input.pin_is_pressed(TouchPin.P0):
+    if not (input.pin_is_pressed(TouchPin.P1)):
         music.play(music.tone_playable(220, music.beat(BeatFraction.WHOLE)),
             music.PlaybackMode.UNTIL_DONE)
         basic.show_number(1)
