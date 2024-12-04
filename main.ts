@@ -527,6 +527,7 @@ function updateOthers () {
     if (sensorState != 0) {
         radio.sendNumber(sensorState)
         record(sensorState)
+        basic.pause(75)
     }
 }
 let updateFromRemote = 0
